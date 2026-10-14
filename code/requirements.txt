@@ -1,0 +1,15 @@
+torch>=2.2
+transformers>=4.46,<5
+peft>=0.13
+accelerate>=0.34
+datasets>=2.19,<4
+sentencepiece
+protobuf
+rouge-score
+nltk
+numpy
+# scipy is NOT required: seed_stats.py computes the t-distribution itself,
+# so the cluster environment needs nothing beyond the packages above.
+# local_judge.py needs nothing beyond transformers + accelerate, both already listed.
+# anthropic is only for the legacy API judge (llm_judge.py) and is not needed.
+# anthropic
